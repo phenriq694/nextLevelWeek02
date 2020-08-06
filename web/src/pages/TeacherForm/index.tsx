@@ -2,6 +2,8 @@ import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
+import TextArea from '../../components/TextArea';
+import Select from '../../components/Select';
 
 import warningIcon from '../../assets/icons/warning.svg';
 
@@ -21,11 +23,23 @@ function TeacherForm() {
           <Input name="name" label="Nome Completo" />
           <Input name="avatar" label="Avatar" />
           <Input name="whatsapp" label="Whatsapp" />
+          <TextArea name="bio" label="Biografia" />
         </fieldset>
 
         <fieldset>
           <legend>Sobre as aulas</legend>
-          <Input name="subject" label="Matéria" />
+          <Select 
+            name="subject" 
+            label="Matéria" 
+            options={[ 
+              { value: 'Artes', label: 'Artes' },
+              { value: 'Biologia', label: 'Biologia' },
+              { value: 'Ciências', label: 'Ciências' },
+              { value: 'Educação', label: 'Educação' },
+              { value: 'Física', label: 'Física' },
+            ]}
+          />
+
           <Input name="cost" label="Custo da sua hora por aula" />
         </fieldset>
 
