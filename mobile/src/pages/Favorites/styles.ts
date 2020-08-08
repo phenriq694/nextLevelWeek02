@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
     flex: 1, 
     backgroundColor: '#F0F0F0',
   },
+
+  teacherList: {
+    marginTop: -50,
+  }
 });
 
 export default styles;
